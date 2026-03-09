@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Itsuo Doi | Sakai Japanese Knife Blacksmith | Japan Knife Makers Database</title>
+  <meta name="description" content="Son of legendary Keijiro Doi. Carries on the family tradition of forging at lower temperatures for superior steel quality. Blades favored by top Japanese chefs. Region: Sakai, Osaka. Price: $400–$1500."/>
+  <meta property="og:title" content="Itsuo Doi — Japan Knife Makers Database"/>
+  <meta property="og:description" content="Son of legendary Keijiro Doi. Carries on the family tradition of forging at lower temperatures for superior steel quality. Blades favored by top Japanese chefs."/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#F7F5F0;--surface:#FFF;--navy:#1C2340;--gold:#B8933F;--gold-lt:#F0E6CC;--red:#8C2020;--text:#2A2A2A;--muted:#6B6B6B;--border:#E0DDD6;--radius:8px}
+    body{font-family:'Georgia','Times New Roman',serif;background:var(--bg);color:var(--text);line-height:1.6}
+    a{color:var(--navy);text-decoration:none}
+    a:hover{text-decoration:underline}
+
+    /* NAV */
+    nav{background:var(--navy);padding:14px 24px;display:flex;align-items:center;gap:8px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.82rem}
+    nav a{color:#8A90A8}
+    nav a:hover{color:#fff;text-decoration:none}
+    nav .sep{color:#3A4060}
+
+    /* HERO */
+    .hero{background:var(--navy);color:#fff;padding:40px 24px 36px;text-align:center}
+    .hero .kamon{font-size:2.2rem;color:var(--gold);margin-bottom:8px}
+    .hero h1{font-size:clamp(1.8rem,4vw,2.8rem);font-weight:normal;letter-spacing:.03em}
+    .hero .name-ja{margin-top:6px;color:#8A90A8;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.9rem}
+    .hero .badges{margin-top:16px;display:flex;justify-content:center;gap:8px;flex-wrap:wrap}
+    .badge{padding:4px 14px;border-radius:20px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.78rem;font-weight:600}
+    .badge-region{background:var(--gold-lt);color:#7A5C20}
+    .badge-type{background:#1E3060;color:#8AAAE8}
+    .badge-est{background:#2A1A1A;color:#D08080}
+    .hero .stars{margin-top:14px;display:flex;justify-content:center;gap:3px}
+    .star{color:var(--gold);font-size:1.1rem}
+    .star.empty{color:#3A4060}
+
+    /* MAIN */
+    .main{max-width:860px;margin:0 auto;padding:32px 24px 64px}
+
+    /* SPECS GRID */
+    .specs{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-bottom:28px}
+    .spec-item{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px}
+    .spec-label{display:block;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:4px}
+    .spec-val{font-family:'Helvetica Neue',Arial,sans-serif;font-size:.95rem;font-weight:600;color:var(--navy)}
+
+    /* SECTION */
+    .section{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:24px;margin-bottom:20px}
+    .section h2{font-size:1rem;font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+    .description-text{font-size:.95rem;line-height:1.7;color:var(--text)}
+
+    /* PILLS */
+    .pill-list{display:flex;flex-wrap:wrap;gap:6px}
+    .pill{padding:4px 12px;background:var(--bg);border:1px solid var(--border);border-radius:20px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.8rem;color:var(--text)}
+    .pill.steel{background:#F0F5F0;border-color:#C0D4C0;color:#2A4A2A}
+
+    /* TAGS */
+    .tag-list{display:flex;flex-wrap:wrap;gap:6px}
+    .tag{padding:3px 10px;border-radius:4px;font-size:.73rem;font-family:'Helvetica Neue',Arial,sans-serif;background:#F2F0EB;color:#5A5550;border:1px solid #E0DDD6}
+
+    /* VISIT */
+    .visit-badge{display:inline-block;padding:6px 14px;border-radius:var(--radius);font-family:'Helvetica Neue',Arial,sans-serif;font-size:.82rem;color:#2A7A4A;background:#E8F5EE;border:1px solid #B8DFC8;margin-bottom:16px}
+    .visit-badge.exp{color:#7A4A2A;background:#F5EEE8;border-color:#DFC8B8}
+
+    /* REGION BOX */
+    .region-box{background:#F0F5FF;border:1px solid #C0D0E8;border-radius:var(--radius);padding:16px 20px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.85rem;line-height:1.6;color:#2A3A5A}
+
+    /* BUTTONS */
+    .btn-primary{display:inline-block;padding:12px 28px;background:var(--navy);color:#fff;border-radius:var(--radius);font-family:'Helvetica Neue',Arial,sans-serif;font-size:.9rem;transition:background .2s}
+    .btn-primary:hover{background:var(--gold);text-decoration:none;color:#fff}
+    .btn-back{display:inline-block;padding:8px 18px;border:1.5px solid var(--border);border-radius:var(--radius);font-family:'Helvetica Neue',Arial,sans-serif;font-size:.82rem;color:var(--muted);transition:all .2s}
+    .btn-back:hover{border-color:var(--navy);color:var(--navy);text-decoration:none}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-top:4px}
+
+    /* RELATED */
+    .related-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:12px}
+    .related-card{background:var(--bg);border:1px solid var(--border);border-radius:var(--radius);padding:14px;display:block;transition:transform .2s,box-shadow .2s}
+    .related-card:hover{transform:translateY(-2px);box-shadow:0 4px 16px rgba(0,0,0,.1);text-decoration:none}
+    .related-name{font-weight:bold;font-size:.88rem;color:var(--navy);margin-bottom:2px}
+    .related-forge{font-size:.75rem;color:var(--muted);font-family:'Helvetica Neue',Arial,sans-serif;margin-bottom:4px}
+    .related-stars{font-size:.75rem;color:var(--gold);margin-bottom:2px}
+    .related-price{font-size:.75rem;color:var(--muted);font-family:'Helvetica Neue',Arial,sans-serif}
+
+    /* FOOTER */
+    footer{background:var(--navy);color:#8A90A8;text-align:center;padding:28px 24px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.8rem}
+    footer strong{color:#fff}
+
+    @media(max-width:600px){
+      .hero{padding:28px 16px 24px}
+      .main{padding:20px 16px 48px}
+      .specs{grid-template-columns:1fr 1fr}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html">⚔ Japan Knife Makers</a>
+  <span class="sep">›</span>
+  <a href="../index.html?region=Sakai">Sakai</a>
+  <span class="sep">›</span>
+  <span style="color:#fff">Itsuo Doi</span>
+</nav>
+
+<div class="hero">
+  <div class="kamon">⚔</div>
+  <h1>Itsuo Doi</h1>
+  <div class="name-ja">土井 逸夫 · Doi Hamono</div>
+  <div class="badges">
+    <span class="badge badge-region">Sakai · Osaka</span>
+    <span class="badge badge-type">Blacksmith</span>
+    
+  </div>
+  <div class="stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+</div>
+
+<div class="main">
+
+  <!-- SPECS -->
+  <div class="specs">
+    <div class="spec-item">
+      <span class="spec-label">Region</span>
+      <span class="spec-val">Sakai, Osaka</span>
+    </div>
+    <div class="spec-item">
+      <span class="spec-label">Handle Style</span>
+      <span class="spec-val">Wa</span>
+    </div>
+    <div class="spec-item">
+      <span class="spec-label">Price Range</span>
+      <span class="spec-val">$400–$1500</span>
+    </div>
+    <div class="spec-item">
+      <span class="spec-label">Tier</span>
+      <span class="spec-val">Premium ($600+)</span>
+    </div>
+    
+    <div class="spec-item">
+      <span class="spec-label">Type</span>
+      <span class="spec-val">Blacksmith</span>
+    </div>
+  </div>
+
+  <!-- ABOUT -->
+  <div class="section">
+    <h2>About Itsuo Doi</h2>
+    
+    <p class="description-text">Son of legendary Keijiro Doi. Carries on the family tradition of forging at lower temperatures for superior steel quality. Blades favored by top Japanese chefs.</p>
+  </div>
+
+  <!-- SPECIALTY -->
+  <div class="section">
+    <h2>Specialty Knife Types</h2>
+    <div class="pill-list"><span class="pill">Yanagiba</span><span class="pill">Deba</span><span class="pill">Usuba</span><span class="pill">Gyuto</span></div>
+  </div>
+
+  <!-- STEEL -->
+  <div class="section">
+    <h2>Steel Types Used</h2>
+    <div class="pill-list"><span class="pill steel">Aogami #2</span><span class="pill steel">Shirogami #1</span></div>
+  </div>
+
+  <!-- TAGS -->
+  <div class="section">
+    <h2>Tags</h2>
+    <div class="tag-list"><span class="tag">sakai</span><span class="tag">legendary</span><span class="tag">blue steel</span><span class="tag">yanagiba</span><span class="tag">premium</span><span class="tag">professional chef</span></div>
+  </div>
+
+  <!-- REGION -->
+  <div class="section">
+    <h2>About the Sakai Region</h2>
+    <div class="region-box">Sakai (Osaka Prefecture) has been Japan's knife capital for over 600 years. Blades here are produced through a strict division of labor among specialist smiths, sharpeners, and handle-makers — resulting in unrivaled single-bevel precision.</div>
+  </div>
+
+  <!-- ACTIONS -->
+  <div class="actions" style="margin-bottom:32px">
+    
+    <a class="btn-back" href="../index.html">← Back to All Makers</a>
+  </div>
+
+  <!-- RELATED -->
+  <div class="section"><h2>Other Sakai Makers</h2><div class="related-grid">
+        <a class="related-card" href="sakai-takayuki.html">
+          <div class="related-name">Sakai Takayuki</div>
+          <div class="related-forge">Sakai Takayuki</div>
+          <div class="related-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star empty">★</span></div>
+          <div class="related-price">$80–$500</div>
+        </a>
+        <a class="related-card" href="yasuhiro-hirakawa.html">
+          <div class="related-name">Yasuhiro Hirakawa (Sasuke)</div>
+          <div class="related-forge">Sasuke</div>
+          <div class="related-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+          <div class="related-price">$250–$900</div>
+        </a>
+        <a class="related-card" href="satoshi-nakagawa.html">
+          <div class="related-name">Satoshi Nakagawa</div>
+          <div class="related-forge">Nakagawa Hamono</div>
+          <div class="related-stars"><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span></div>
+          <div class="related-price">$250–$800</div>
+        </a></div></div>
+
+</div>
+
+<footer>
+  <strong>Japan Knife Makers Database</strong>
+  <p>An independent guide to Japanese knife-making traditions. · <a href="../index.html" style="color:#8A90A8">← All Makers</a></p>
+</footer>
+
+</body>
+</html>

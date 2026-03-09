@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Japan Knife Makers — The Complete Database of Japanese Knife Blacksmiths & Forges</title>
+  <meta name="description" content="Explore 30+ Japanese knife blacksmiths and forges by region, steel type, knife type, and price. The most comprehensive English-language database of Japan's knife-making tradition." />
+  <meta property="og:title" content="Japan Knife Makers Database" />
+  <meta property="og:description" content="Find Japanese knife makers by region, steel, and specialty. Sakai, Echizen, Seki, Tosa, Sanjo and more." />
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg:       #F7F5F0;
+      --surface:  #FFFFFF;
+      --navy:     #1C2340;
+      --gold:     #B8933F;
+      --gold-lt:  #F0E6CC;
+      --red:      #8C2020;
+      --text:     #2A2A2A;
+      --muted:    #6B6B6B;
+      --border:   #E0DDD6;
+      --radius:   8px;
+      --shadow:   0 2px 12px rgba(0,0,0,.08);
+    }
+    body { font-family: 'Georgia', 'Times New Roman', serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+    a { color: var(--navy); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Header ── */
+    header {
+      background: var(--navy);
+      color: #fff;
+      padding: 48px 24px 40px;
+      text-align: center;
+    }
+    header .kamon { font-size: 2rem; letter-spacing: .1em; color: var(--gold); margin-bottom: 8px; }
+    header h1 { font-size: clamp(1.6rem, 4vw, 2.6rem); font-weight: normal; letter-spacing: .04em; }
+    header h1 em { color: var(--gold); font-style: normal; }
+    header p.tagline {
+      margin-top: 10px;
+      font-size: .95rem;
+      color: #B8BDD6;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      max-width: 560px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    header .stats {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .85rem;
+      color: #8A90A8;
+    }
+    header .stats span strong { color: var(--gold); font-size: 1.3rem; display: block; }
+
+    /* ── Search & Filters ── */
+    .controls {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,.06);
+    }
+    .controls-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 16px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .search-row {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .search-row input {
+      flex: 1;
+      padding: 10px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      font-size: .95rem;
+      font-family: inherit;
+      background: var(--bg);
+      transition: border-color .2s;
+    }
+    .search-row input:focus { outline: none; border-color: var(--gold); }
+    .result-count {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .85rem;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .filter-group {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .filter-group label {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      color: var(--muted);
+    }
+    .filter-group select {
+      padding: 6px 28px 6px 10px;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      font-size: .85rem;
+      background: var(--bg);
+      color: var(--text);
+      cursor: pointer;
+      appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%236B6B6B'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 10px center;
+      transition: border-color .2s;
+    }
+    .filter-group select:focus { outline: none; border-color: var(--gold); }
+    .btn-reset {
+      padding: 6px 14px;
+      background: transparent;
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius);
+      font-size: .82rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      cursor: pointer;
+      color: var(--muted);
+      transition: all .2s;
+    }
+    .btn-reset:hover { border-color: var(--red); color: var(--red); }
+
+    /* ── Main Grid ── */
+    main {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 28px 24px 60px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 20px;
+    }
+    .no-results {
+      text-align: center;
+      padding: 80px 24px;
+      color: var(--muted);
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      display: none;
+    }
+    .no-results p { font-size: 1.1rem; margin-bottom: 8px; }
+
+    /* ── Card ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 22px;
+      box-shadow: var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: transform .2s, box-shadow .2s;
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(0,0,0,.12); }
+
+    .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+    .card-title { flex: 1; }
+    .card-title h2 { font-size: 1.1rem; font-weight: bold; color: var(--navy); line-height: 1.3; }
+    .card-title .name-ja { font-size: .78rem; color: var(--muted); font-family: 'Helvetica Neue', Arial, sans-serif; margin-top: 2px; }
+
+    .rating { display: flex; gap: 2px; flex-shrink: 0; }
+    .star { color: var(--gold); font-size: .9rem; }
+    .star.empty { color: #D4D0C8; }
+
+    .region-badge {
+      display: inline-block;
+      padding: 3px 10px;
+      background: var(--gold-lt);
+      color: #7A5C20;
+      border-radius: 20px;
+      font-size: .72rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
+    .type-badge {
+      display: inline-block;
+      padding: 2px 8px;
+      background: #EAF0FF;
+      color: #3A5090;
+      border-radius: 20px;
+      font-size: .68rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-weight: 600;
+      letter-spacing: .03em;
+      margin-left: 4px;
+    }
+
+    .card-meta {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .8rem;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .meta-row { display: flex; gap: 6px; align-items: baseline; }
+    .meta-label { color: var(--muted); min-width: 72px; font-size: .73rem; text-transform: uppercase; letter-spacing: .05em; }
+    .meta-val { color: var(--text); }
+    .pill-list { display: flex; flex-wrap: wrap; gap: 4px; }
+    .pill {
+      padding: 2px 8px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      font-size: .72rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: var(--text);
+    }
+    .pill.steel { background: #F0F5F0; border-color: #C0D4C0; color: #2A4A2A; }
+
+    .price-range {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .82rem;
+      color: var(--muted);
+    }
+    .price-range strong { color: var(--text); }
+
+    .description {
+      font-size: .88rem;
+      color: var(--muted);
+      line-height: 1.55;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      flex: 1;
+    }
+
+    .card-tags { display: flex; flex-wrap: wrap; gap: 4px; }
+    .tag {
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: .68rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: #F2F0EB;
+      color: #5A5550;
+      border: 1px solid #E0DDD6;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 8px;
+      border-top: 1px solid var(--border);
+      gap: 8px;
+    }
+    .visit-badge {
+      font-size: .72rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      color: #2A7A4A;
+      background: #E8F5EE;
+      border: 1px solid #B8DFC8;
+      border-radius: 4px;
+      padding: 2px 8px;
+    }
+    .btn-detail {
+      padding: 7px 16px;
+      background: var(--navy);
+      color: #fff;
+      border: none;
+      border-radius: var(--radius);
+      font-size: .8rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
+      transition: background .2s;
+    }
+    .btn-detail:hover { background: var(--gold); text-decoration: none; color: #fff; }
+
+    /* ── Regions Section ── */
+    .region-nav {
+      max-width: 1200px;
+      margin: 0 auto 0;
+      padding: 20px 24px 0;
+    }
+    .region-nav h3 {
+      font-size: .75rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+    .region-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .region-chip {
+      padding: 6px 16px;
+      border: 1.5px solid var(--border);
+      border-radius: 24px;
+      font-size: .82rem;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      cursor: pointer;
+      background: var(--surface);
+      color: var(--text);
+      transition: all .2s;
+    }
+    .region-chip:hover, .region-chip.active {
+      background: var(--navy);
+      color: #fff;
+      border-color: var(--navy);
+    }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--navy);
+      color: #8A90A8;
+      text-align: center;
+      padding: 32px 24px;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      font-size: .82rem;
+    }
+    footer strong { color: #fff; }
+    footer p { margin-top: 6px; }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      header { padding: 32px 16px 28px; }
+      .controls-inner { padding: 12px 16px; }
+      .filters { gap: 6px; }
+      main { padding: 20px 16px 48px; }
+      .grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ════════ HEADER ════════ -->
+<header>
+  <div class="kamon">⚔</div>
+  <h1>Japan <em>Knife Makers</em> Database</h1>
+  <p class="tagline">The most comprehensive English guide to Japanese knife blacksmiths, forges, and regional traditions — searchable by region, steel, and specialty.</p>
+  <div class="stats">
+    <span><strong id="stat-makers">30</strong>Makers & Brands</span>
+    <span><strong>7</strong>Regions</span>
+    <span><strong>1,600+</strong>Years of Tradition</span>
+  </div>
+</header>
+
+<!-- ════════ REGION CHIPS ════════ -->
+<div class="region-nav">
+  <h3>Browse by Region</h3>
+  <div class="region-chips">
+    <button class="region-chip active" data-region="all">All Regions</button>
+    <button class="region-chip" data-region="Sakai">Sakai — Osaka</button>
+    <button class="region-chip" data-region="Echizen">Echizen — Fukui</button>
+    <button class="region-chip" data-region="Seki">Seki — Gifu</button>
+    <button class="region-chip" data-region="Tosa">Tosa — Kochi</button>
+    <button class="region-chip" data-region="Sanjo">Sanjo — Niigata</button>
+    <button class="region-chip" data-region="Miki">Miki — Hyogo</button>
+  </div>
+</div>
+
+<!-- ════════ CONTROLS ════════ -->
+<div class="controls">
+  <div class="controls-inner">
+    <div class="search-row">
+      <input type="text" id="search" placeholder="Search by name, forge, or description…" aria-label="Search" />
+      <span class="result-count" id="result-count"></span>
+    </div>
+    <div class="filters">
+      <div class="filter-group">
+        <label for="f-region">Region</label>
+        <select id="f-region">
+          <option value="">All</option>
+          <option value="Sakai">Sakai</option>
+          <option value="Echizen">Echizen</option>
+          <option value="Seki">Seki</option>
+          <option value="Tosa">Tosa</option>
+          <option value="Sanjo">Sanjo</option>
+          <option value="Miki">Miki</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="f-type">Knife Type</label>
+        <select id="f-type">
+          <option value="">All</option>
+          <option value="Gyuto">Gyuto</option>
+          <option value="Yanagiba">Yanagiba</option>
+          <option value="Deba">Deba</option>
+          <option value="Santoku">Santoku</option>
+          <option value="Nakiri">Nakiri</option>
+          <option value="Petty">Petty</option>
+          <option value="Sujihiki">Sujihiki</option>
+          <option value="Bunka">Bunka</option>
+          <option value="Kiritsuke">Kiritsuke</option>
+          <option value="Usuba">Usuba</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="f-steel">Steel</label>
+        <select id="f-steel">
+          <option value="">All</option>
+          <option value="aogami-super">Aogami Super</option>
+          <option value="blue-steel">Blue Steel (Aogami)</option>
+          <option value="white-steel">White Steel (Shirogami)</option>
+          <option value="vg-10">VG-10</option>
+          <option value="r2-sg2">R2 / SG2</option>
+          <option value="hap40">HAP40</option>
+          <option value="ginsan">Ginsan (Silver #3)</option>
+          <option value="damascus">Damascus</option>
+          <option value="stainless">Stainless</option>
+          <option value="carbon-steel">Carbon Steel</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="f-price">Price</label>
+        <select id="f-price">
+          <option value="">All</option>
+          <option value="budget">Budget (under $100)</option>
+          <option value="mid">Mid ($100–$300)</option>
+          <option value="high">High-end ($300–$600)</option>
+          <option value="premium">Premium ($600+)</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="f-handle">Handle</label>
+        <select id="f-handle">
+          <option value="">All</option>
+          <option value="Wa">Wa (Japanese)</option>
+          <option value="Western">Western</option>
+          <option value="Both">Both</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="f-visit">Visit</label>
+        <select id="f-visit">
+          <option value="">All</option>
+          <option value="yes">Can Visit</option>
+          <option value="exp">Has Experience</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="f-sort">Sort</label>
+        <select id="f-sort">
+          <option value="rating">Rating ↓</option>
+          <option value="name">Name A–Z</option>
+          <option value="price-asc">Price ↑</option>
+          <option value="price-desc">Price ↓</option>
+          <option value="founded">Founded (oldest)</option>
+        </select>
+      </div>
+      <button class="btn-reset" id="btn-reset">Reset all</button>
+    </div>
+  </div>
+</div>
+
+<!-- ════════ MAIN GRID ════════ -->
+<main>
+  <div class="grid" id="grid"></div>
+  <div class="no-results" id="no-results">
+    <p>No makers found for your filters.</p>
+    <span>Try adjusting your search or <button class="btn-reset" style="background:none;border:none;color:var(--gold);cursor:pointer;font-size:1rem;text-decoration:underline" id="btn-reset2">reset all filters</button>.</span>
+  </div>
+</main>
+
+<!-- ════════ FOOTER ════════ -->
+<footer>
+  <strong>Japan Knife Makers Database</strong>
+  <p>An independent, non-commercial guide to Japanese knife-making traditions. Data sourced from public information and verified where possible.</p>
+  <p style="margin-top:12px">© 2026 Japan Knife Makers Database · <a href="about.html" style="color:#8A90A8">About</a> · <a href="privacy.html" style="color:#8A90A8">Privacy Policy</a></p>
+</footer>
+
+<!-- ════════ JAVASCRIPT ════════ -->
+<script>
+// ── Slug map (id → filename) ──
+const SLUGS = {
+  1:'yu-kurosaki',2:'yoshimi-kato',3:'hideo-kitaoka',4:'takeshi-saji',
+  5:'katsushige-anryu',6:'isamu-takamura',7:'nao-yamamoto',8:'shungo-ogata',
+  9:'makoto-kurosaki',10:'sakai-takayuki',11:'itsuo-doi',12:'yasuhiro-hirakawa',
+  13:'satoshi-nakagawa',14:'sakai-kikumori',15:'konosuke',16:'jikko',
+  17:'ichimonji-mitsuhide',18:'mac-knife',19:'miyabi',20:'kai-group',
+  21:'tojiro',22:'tamahagane',23:'nigara-hamono',24:'hokiyama',
+  25:'hatsukokoro',26:'harukaze',27:'tsunehisa',28:'chikamasa',
+  29:'misono',30:'ryusen'
+};
+
+// ── Load data ──
+let allData = [];
+let filtered = [];
+
+fetch('data.json')
+  .then(r => r.json())
+  .then(data => {
+    allData = data;
+    document.getElementById('stat-makers').textContent = data.length;
+    render(data);
+  });
+
+// ── Render cards ──
+function render(data) {
+  filtered = data;
+  const grid = document.getElementById('grid');
+  const noRes = document.getElementById('no-results');
+  const count = document.getElementById('result-count');
+
+  count.textContent = data.length + ' result' + (data.length !== 1 ? 's' : '');
+
+  if (data.length === 0) {
+    grid.innerHTML = '';
+    noRes.style.display = 'block';
+    return;
+  }
+  noRes.style.display = 'none';
+
+  grid.innerHTML = data.map(m => {
+    const stars = Array.from({length:5}, (_,i) =>
+      `<span class="star${i < m.rating ? '' : ' empty'}">★</span>`
+    ).join('');
+
+    const specialtyPills = (m.specialtyTypes || []).slice(0,4).map(s =>
+      `<span class="pill">${s}</span>`
+    ).join('');
+
+    const steelPills = (m.steelTypes || []).slice(0,3).map(s =>
+      `<span class="pill steel">${s}</span>`
+    ).join('');
+
+    const priceMap = { budget:'under $100', mid:'$100–$300', high:'$300–$600', premium:'$600+' };
+    const priceLabel = priceMap[m.priceRange] || '';
+
+    const topTags = (m.tags || [])
+      .filter(t => !['sakai','echizen','seki','tosa','sanjo','miki','gyuto','yanagiba','deba','santoku','nakiri'].includes(t))
+      .slice(0,4)
+      .map(t => `<span class="tag">${t.replace(/-/g,' ')}</span>`).join('');
+
+    const visitBadge = m.workshopExperience
+      ? `<span class="visit-badge">🔨 Workshop Experience</span>`
+      : m.canVisit
+        ? `<span class="visit-badge">📍 Visitable</span>`
+        : '';
+
+    const slug = SLUGS[m.id];
+    const detailUrl = slug ? `items/${slug}.html` : null;
+    const linkBtn = detailUrl
+      ? `<a class="btn-detail" href="${detailUrl}">View Details →</a>`
+      : `<span class="btn-detail" style="background:var(--border);color:var(--muted);cursor:default">Details</span>`;
+
+    return `
+    <div class="card" data-id="${m.id}">
+      <div class="card-header">
+        <div class="card-title">
+          <h2>${m.nameEn}</h2>
+          <div class="name-ja">${m.nameJa} · ${m.forge}</div>
+        </div>
+        <div class="rating">${stars}</div>
+      </div>
+
+      <div>
+        <span class="region-badge">${m.region} · ${m.prefecture}</span>
+        <span class="type-badge">${m.type === 'individual' ? 'Blacksmith' : 'Brand'}</span>
+        ${m.foundedYear ? `<span class="type-badge" style="background:#FFF0F0;color:#8C2020">Est. ${m.foundedYear}</span>` : ''}
+      </div>
+
+      <div class="card-meta">
+        <div class="meta-row">
+          <span class="meta-label">Specialty</span>
+          <div class="pill-list">${specialtyPills}</div>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Steel</span>
+          <div class="pill-list">${steelPills}</div>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Handle</span>
+          <span class="meta-val">${m.handleStyle}</span>
+        </div>
+        <div class="meta-row">
+          <span class="meta-label">Price</span>
+          <span class="price-range"><strong>${priceLabel}</strong> ($${m.priceMin}–$${m.priceMax})</span>
+        </div>
+      </div>
+
+      <p class="description">${m.description}</p>
+
+      ${topTags ? `<div class="card-tags">${topTags}</div>` : ''}
+
+      <div class="card-footer">
+        <div>${visitBadge}</div>
+        ${linkBtn}
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ── Filter & Sort logic ──
+function applyFilters() {
+  const q      = document.getElementById('search').value.toLowerCase().trim();
+  const region = document.getElementById('f-region').value;
+  const type   = document.getElementById('f-type').value;
+  const steel  = document.getElementById('f-steel').value;
+  const price  = document.getElementById('f-price').value;
+  const handle = document.getElementById('f-handle').value;
+  const visit  = document.getElementById('f-visit').value;
+  const sort   = document.getElementById('f-sort').value;
+
+  // Sync region chips
+  document.querySelectorAll('.region-chip').forEach(c => {
+    const r = c.dataset.region;
+    c.classList.toggle('active', r === 'all' ? region === '' : r === region);
+  });
+  // Sync region dropdown
+  document.getElementById('f-region').value = region;
+
+  let result = allData.filter(m => {
+    if (q && !`${m.nameEn} ${m.nameJa} ${m.forge} ${m.description} ${(m.tags||[]).join(' ')}`.toLowerCase().includes(q)) return false;
+    if (region && m.region !== region) return false;
+    if (type && !(m.specialtyTypes||[]).includes(type)) return false;
+    if (steel && !(m.tags||[]).includes(steel)) return false;
+    if (price && m.priceRange !== price) return false;
+    if (handle && m.handleStyle !== handle) return false;
+    if (visit === 'yes' && !m.canVisit) return false;
+    if (visit === 'exp' && !m.workshopExperience) return false;
+    return true;
+  });
+
+  // Sort
+  result.sort((a, b) => {
+    if (sort === 'rating')     return b.rating - a.rating;
+    if (sort === 'name')       return a.nameEn.localeCompare(b.nameEn);
+    if (sort === 'price-asc')  return a.priceMin - b.priceMin;
+    if (sort === 'price-desc') return b.priceMax - a.priceMax;
+    if (sort === 'founded')    return (a.foundedYear||9999) - (b.foundedYear||9999);
+    return 0;
+  });
+
+  render(result);
+}
+
+// ── Event listeners ──
+['search','f-region','f-type','f-steel','f-price','f-handle','f-visit','f-sort']
+  .forEach(id => document.getElementById(id).addEventListener('input', applyFilters));
+
+function resetAll() {
+  document.getElementById('search').value = '';
+  ['f-region','f-type','f-steel','f-price','f-handle','f-visit'].forEach(id => {
+    document.getElementById(id).value = '';
+  });
+  document.getElementById('f-sort').value = 'rating';
+  document.querySelectorAll('.region-chip').forEach(c => c.classList.toggle('active', c.dataset.region === 'all'));
+  applyFilters();
+}
+
+document.getElementById('btn-reset').addEventListener('click', resetAll);
+document.getElementById('btn-reset2').addEventListener('click', resetAll);
+
+// Region chips
+document.querySelectorAll('.region-chip').forEach(chip => {
+  chip.addEventListener('click', () => {
+    const r = chip.dataset.region;
+    document.getElementById('f-region').value = r === 'all' ? '' : r;
+    applyFilters();
+  });
+});
+</script>
+</body>
+</html>
