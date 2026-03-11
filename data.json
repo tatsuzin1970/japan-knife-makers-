@@ -44,7 +44,7 @@
     "workshopExperience": false,
     "rating": 5,
     "description": "Son of legendary Hiroshi Kato. Took over in 2017 and continues his father's Damascus tradition at Takefu Knife Village. Known for laser-thin grinds.",
-    "url": "https://www.takefu-knifevillage.jp/",
+    "url": "https://en.takefu-knifevillage.jp/",
     "tags": ["echizen", "damascus", "takefu-village", "gyuto", "laser-grind", "carbon-steel"]
   },
   {
@@ -68,7 +68,7 @@
     "workshopExperience": false,
     "rating": 5,
     "description": "Born 1950. Takefu Village master specializing in traditional single-bevel Japanese knives. Considered one of the finest traditional-style bladesmiths alive.",
-    "url": "https://www.takefu-knifevillage.jp/",
+    "url": "https://knifewear.com/en-us/collections/hideo-kitaoka",
     "tags": ["echizen", "single-bevel", "yanagiba", "deba", "white-steel", "traditional", "takefu-village"]
   },
   {
@@ -92,7 +92,7 @@
     "workshopExperience": false,
     "rating": 5,
     "description": "Co-founder of Takefu Knife Village in 1973. Over 40 years of expertise. Famous for colorful Damascus patterns using rainbow heat treatment.",
-    "url": "https://www.takefu-knifevillage.jp/",
+    "url": "https://japanesechefsknife.com/collections/takeshi-saji",
     "tags": ["echizen", "damascus", "takefu-village", "founder", "gyuto", "colorful-damascus"]
   },
   {
@@ -116,7 +116,7 @@
     "workshopExperience": false,
     "rating": 4,
     "description": "Co-founder of Takefu Knife Village. Known for copper-clad Damascus (tsuchime) finish and robust carbon steel blades at accessible prices.",
-    "url": "https://www.takefu-knifevillage.jp/",
+    "url": "https://knifewear.com/en-us/blogs/articles/blacksmith-profile-katsushige-anryu",
     "tags": ["echizen", "copper-clad", "takefu-village", "founder", "carbon-steel", "tsuchime"]
   },
   {
@@ -164,7 +164,7 @@
     "workshopExperience": false,
     "rating": 4,
     "description": "Apprenticed under the late master Masami Azai. One of the most sought-after younger-generation Echizen smiths. Iron-clad carbon steel specialty.",
-    "url": "",
+    "url": "https://knifewear.com/en-us/collections/nao-yamamoto",
     "tags": ["echizen", "aogami-super", "iron-clad", "gyuto", "next-generation"]
   },
   {
@@ -188,7 +188,7 @@
     "workshopExperience": false,
     "rating": 4,
     "description": "Up-and-coming Echizen smith gaining international attention. Produces refined knives with excellent fit and finish. Strong online following among collectors.",
-    "url": "",
+    "url": "https://us.seisukeknife.com/collections/shungo-ogata",
     "tags": ["echizen", "r2-sg2", "gyuto", "collector-favorite", "modern-style"]
   },
   {
@@ -212,7 +212,7 @@
     "workshopExperience": false,
     "rating": 4,
     "description": "Rising Echizen smith. Produces sharp, elegant knives with a focus on performance and clean aesthetics. Popular in the western knife enthusiast community.",
-    "url": "",
+    "url": "https://knifewear.com/en-us/collections/makoto-kurosaki",
     "tags": ["echizen", "aogami-super", "gyuto", "collector-favorite"]
   },
   {
@@ -260,7 +260,7 @@
     "workshopExperience": false,
     "rating": 5,
     "description": "Son of legendary Keijiro Doi. Carries on the family tradition of forging at lower temperatures for superior steel quality. Blades favored by top Japanese chefs.",
-    "url": "",
+    "url": "https://knifewear.com/en-us/collections/itsuo-doi",
     "tags": ["sakai", "legendary", "blue-steel", "yanagiba", "premium", "professional-chef"]
   },
   {
@@ -284,7 +284,7 @@
     "workshopExperience": false,
     "rating": 5,
     "description": "22nd-generation blacksmith. One of only five remaining scissor-and-knife makers in Japan. Museum-level craftsmanship with centuries of family tradition.",
-    "url": "https://www.permanentstyle.com/2016/11/sasuke-master-japanese-knife-maker-sakai-osaka.html",
+    "url": "http://sasuke-smith.com/English_version/e-about-sasuke.html",
     "tags": ["sakai", "22nd-generation", "ultra-rare", "yanagiba", "blue-steel", "heritage"]
   },
   {
@@ -308,7 +308,7 @@
     "workshopExperience": false,
     "rating": 5,
     "description": "Trained for 16 years under master Kenichi Shiraki. Now considered one of Sakai's finest active smiths. Exceptional heat treatment consistency.",
-    "url": "",
+    "url": "https://knifewear.com/en-us/collections/satoshi-nakagawa",
     "tags": ["sakai", "yanagiba", "deba", "blue-steel", "professional"]
   },
   {
@@ -332,7 +332,7 @@
     "workshopExperience": false,
     "rating": 4,
     "description": "Respected Sakai brand known for consistent quality across both traditional Japanese and Western-style knives. Popular with professional and home cooks alike.",
-    "url": "",
+    "url": "https://www.kikumori.co.jp/",
     "tags": ["sakai", "traditional", "blue-steel", "gyuto", "yanagiba", "professional"]
   },
   {
@@ -548,7 +548,7 @@
     "workshopExperience": false,
     "rating": 4,
     "description": "400-year-old sword-making heritage converted to kitchen knives. Known for distinctive twisted Damascus (Anmon) patterns and impressive Aogami Super performance.",
-    "url": "",
+    "url": "https://nigaraknives.com/",
     "tags": ["niigata", "400-year-heritage", "aogami-super", "damascus", "anmon-pattern", "gyuto"]
   },
   {
@@ -572,7 +572,7 @@
     "workshopExperience": false,
     "rating": 4,
     "description": "Tosa-based brand known for the Sakon and Hamokyu series. Praised for thin grinds, reactive carbon steel options, and excellent value in the mid-tier segment.",
-    "url": "",
+    "url": "https://www.hokiyama.com/",
     "tags": ["tosa", "kochi", "aogami", "ginsan", "gyuto", "thin-grind", "value"]
   },
   {
@@ -596,7 +596,7 @@
     "workshopExperience": false,
     "rating": 4,
     "description": "Newer Tosa brand with rapid international following. Produces clean, high-performance knives with excellent heat treatment and attractive wa-handles at fair prices.",
-    "url": "",
+    "url": "https://cutleryandmore.com/collections/hatsukokoro",
     "tags": ["tosa", "kochi", "aogami-super", "wa-handle", "gyuto", "modern", "collector"]
   },
   {
@@ -620,7 +620,7 @@
     "workshopExperience": false,
     "rating": 4,
     "description": "Tosa brand specializing in Ginsan (Silver #3) stainless blades — the stainless option preferred by professionals who want low maintenance without sacrificing sharpness.",
-    "url": "",
+    "url": "https://www.chefknivestogo.com/habl2kn.html",
     "tags": ["tosa", "ginsan", "silver-3", "stainless", "professional", "low-maintenance"]
   },
   {
@@ -644,7 +644,7 @@
     "workshopExperience": false,
     "rating": 3,
     "description": "Budget-friendly Tosa brand often recommended as the best entry point to Japanese carbon steel knives. Functional, sharp, and unpretentious — popular with beginners.",
-    "url": "",
+    "url": "https://tokushuknife.com/collections/tsunehisa-1",
     "tags": ["tosa", "budget", "aogami", "beginner-friendly", "entry-level", "carbon-steel"]
   },
   {

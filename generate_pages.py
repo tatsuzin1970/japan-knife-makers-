@@ -165,7 +165,14 @@ def build_page(maker, all_makers, slug):
 
     site_btn = ''
     if maker.get('url'):
-        site_btn = f'<a class="btn-primary" href="{maker["url"]}" target="_blank" rel="noopener">Visit Official Site &#8599;</a>'
+        url = maker['url']
+        RETAILER_DOMAINS = ['knifewear.com', 'japanesechefsknife.com', 'seisukeknife.com',
+                            'cutleryandmore.com', 'chefknivestogo.com', 'tokushuknife.com']
+        if any(d in url for d in RETAILER_DOMAINS):
+            btn_label = 'Browse Knives &#8599;'
+        else:
+            btn_label = 'Visit Official Site &#8599;'
+        site_btn = f'<a class="btn-primary" href="{url}" target="_blank" rel="noopener">{btn_label}</a>'
 
     related_cards = ''
     for r in related:
