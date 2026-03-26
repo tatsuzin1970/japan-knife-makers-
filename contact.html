@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-KP6TF8CM7B"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-KP6TF8CM7B');
+  </script>
+  <title>Contact | Japan Knife Makers Database</title>
+  <meta name="description" content="Contact Japan Knife Makers Database — submit a listing request, report an error, or send a general inquiry about Japanese knife makers and blacksmiths."/>
+  <link rel="canonical" href="https://japan-knife-makers.com/contact.html"/>
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    :root{--bg:#F7F5F0;--surface:#FFF;--navy:#1C2340;--gold:#B8933F;--gold-lt:#F0E6CC;--text:#2A2A2A;--muted:#6B6B6B;--border:#E0DDD6;--radius:8px}
+    body{font-family:'Georgia','Times New Roman',serif;background:var(--bg);color:var(--text);line-height:1.7}
+    a{color:var(--navy)}
+    nav{background:var(--navy);padding:14px 24px;display:flex;align-items:center;gap:8px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.82rem}
+    nav a{color:#8A90A8;text-decoration:none}
+    nav a:hover{color:#fff}
+    nav .sep{color:#3A4060}
+    .hero{background:var(--navy);color:#fff;padding:48px 24px 40px;text-align:center}
+    .hero .kamon{font-size:2rem;color:var(--gold);margin-bottom:8px}
+    .hero h1{font-size:clamp(1.6rem,4vw,2.4rem);font-weight:normal;letter-spacing:.04em}
+    .hero p{margin-top:10px;color:#8A90A8;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.9rem;max-width:520px;margin-left:auto;margin-right:auto}
+    .main{max-width:760px;margin:0 auto;padding:40px 24px 80px}
+
+    /* Category cards */
+    .categories{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-bottom:32px}
+    .cat-card{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px 22px;cursor:pointer;transition:border-color .2s,box-shadow .2s;text-align:center}
+    .cat-card:hover,.cat-card.active{border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,147,63,.15)}
+    .cat-card.active{background:var(--gold-lt)}
+    .cat-card .icon{font-size:1.8rem;margin-bottom:8px}
+    .cat-card .label{font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:.9rem;color:var(--navy);margin-bottom:4px}
+    .cat-card .desc{font-family:'Helvetica Neue',Arial,sans-serif;font-size:.78rem;color:var(--muted);line-height:1.4}
+
+    /* Form */
+    .form-section{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:28px 32px;margin-bottom:24px}
+    .form-section h2{font-size:1.1rem;font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;color:var(--navy);margin-bottom:20px;padding-bottom:12px;border-bottom:1px solid var(--border)}
+    .form-group{margin-bottom:18px}
+    label{display:block;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.82rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);margin-bottom:6px}
+    input[type="text"],input[type="email"],textarea,select{width:100%;padding:10px 14px;border:1px solid var(--border);border-radius:var(--radius);font-family:'Georgia','Times New Roman',serif;font-size:.95rem;color:var(--text);background:#fff;transition:border-color .2s,box-shadow .2s;outline:none}
+    input[type="text"]:focus,input[type="email"]:focus,textarea:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,147,63,.15)}
+    select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%236B6B6B' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:36px;cursor:pointer}
+    textarea{resize:vertical;min-height:140px;line-height:1.6}
+    .btn-submit{display:inline-block;background:var(--navy);color:#fff;font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;font-size:.9rem;letter-spacing:.04em;padding:13px 32px;border:none;border-radius:var(--radius);cursor:pointer;transition:background .2s}
+    .btn-submit:hover{background:#2A3560}
+    .required{color:var(--gold);margin-left:2px}
+
+    /* Info box */
+    .info-box{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:24px 28px;margin-bottom:24px}
+    .info-box h2{font-size:1.1rem;font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;color:var(--navy);margin-bottom:14px;padding-bottom:10px;border-bottom:1px solid var(--border)}
+    .info-box p{font-size:.9rem;font-family:'Helvetica Neue',Arial,sans-serif;color:var(--muted);margin-bottom:10px;line-height:1.6}
+    .info-box p:last-child{margin-bottom:0}
+    .info-box a{color:var(--gold);text-decoration:none}
+    .info-box a:hover{text-decoration:underline}
+
+    .highlight{background:var(--gold-lt);border-left:4px solid var(--gold);padding:14px 18px;border-radius:0 var(--radius) var(--radius) 0;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.85rem;color:#5A4010;margin-top:16px;line-height:1.5}
+
+    /* Success message (hidden by default) */
+    .success-msg{display:none;background:#EAF7EE;border:1px solid #6DBC86;border-radius:10px;padding:24px 28px;text-align:center;margin-bottom:24px}
+    .success-msg .icon{font-size:2rem;margin-bottom:8px}
+    .success-msg h3{font-family:'Helvetica Neue',Arial,sans-serif;font-weight:700;color:#1D6E38;margin-bottom:6px}
+    .success-msg p{font-family:'Helvetica Neue',Arial,sans-serif;font-size:.9rem;color:#2D8A4A}
+
+    footer{background:var(--navy);color:#8A90A8;text-align:center;padding:28px 24px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.8rem}
+    footer strong{color:#fff}
+    footer a{color:#8A90A8}
+    footer p{margin-top:6px}
+
+    @media(max-width:600px){
+      .form-section{padding:20px 18px}
+      .categories{grid-template-columns:1fr}
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html">&#9876; Japan Knife Makers</a>
+  <span class="sep">&rsaquo;</span>
+  <span style="color:#fff">Contact</span>
+</nav>
+
+<div class="hero">
+  <div class="kamon">&#9876;</div>
+  <h1>Contact Us</h1>
+  <p>Listing requests, corrections, and general inquiries</p>
+</div>
+
+<div class="main">
+
+  <!-- Category selector -->
+  <div class="categories" id="categoryCards">
+    <div class="cat-card active" onclick="selectCategory(this,'listing')" data-value="listing">
+      <div class="icon">&#43;</div>
+      <div class="label">Listing Request</div>
+      <div class="desc">Add a maker or forge not yet in the database</div>
+    </div>
+    <div class="cat-card" onclick="selectCategory(this,'correction')" data-value="correction">
+      <div class="icon">&#9998;</div>
+      <div class="label">Information Correction</div>
+      <div class="desc">Report an error or outdated information</div>
+    </div>
+    <div class="cat-card" onclick="selectCategory(this,'other')" data-value="other">
+      <div class="icon">&#8709;</div>
+      <div class="label">Other</div>
+      <div class="desc">General questions, collaborations, press</div>
+    </div>
+  </div>
+
+  <!-- Success message -->
+  <div class="success-msg" id="successMsg">
+    <div class="icon">&#10003;</div>
+    <h3>Message sent</h3>
+    <p>Thank you for reaching out. We&rsquo;ll get back to you as soon as possible.</p>
+  </div>
+
+  <!-- Contact form -->
+  <div class="form-section" id="formSection">
+    <h2 id="formTitle">Listing Request</h2>
+    <form id="contactForm" action="https://formspree.io/f/mnjonqbv" method="POST" onsubmit="handleSubmit(event)">
+      <input type="hidden" name="_subject" id="hiddenSubject" value="[Listing Request] Japan Knife Makers Database"/>
+      <input type="hidden" name="category" id="hiddenCategory" value="listing"/>
+
+      <div class="form-group">
+        <label for="name">Your Name <span class="required">*</span></label>
+        <input type="text" id="name" name="name" placeholder="e.g. John Smith" required/>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address <span class="required">*</span></label>
+        <input type="email" id="email" name="email" placeholder="you@example.com" required/>
+      </div>
+
+      <div class="form-group" id="makerNameGroup">
+        <label for="makerName" id="makerNameLabel">Maker / Forge Name <span class="required">*</span></label>
+        <input type="text" id="makerName" name="maker_name" placeholder="e.g. Hiroshi Kato, Tsubame Forge"/>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message <span class="required">*</span></label>
+        <textarea id="message" name="message" placeholder="Please describe your request in as much detail as possible..." required></textarea>
+      </div>
+
+      <div class="highlight">
+        For listing requests, please include: maker&rsquo;s region, specialty steels, knife types, and a link to an official website or reliable source if available.
+      </div>
+
+      <div style="margin-top:22px">
+        <button type="submit" class="btn-submit">Send Message &rarr;</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Info box -->
+  <div class="info-box">
+    <h2>Frequently Asked Questions</h2>
+    <p><strong>How long does it take to add a new listing?</strong><br>
+    We review all requests manually and aim to process submissions within 2&ndash;4 weeks. Complex additions may take longer.</p>
+    <p><strong>Can I request removal of a listing?</strong><br>
+    Yes. If you are the maker or their representative and wish to be removed from the database, please contact us and we will process the removal promptly.</p>
+    <p><strong>Do you accept advertising or sponsored listings?</strong><br>
+    No. All listings are selected editorially to maintain the independence of this resource. We do not accept payment for placement.</p>
+    <p><strong>I found incorrect information. What happens next?</strong><br>
+    We take accuracy seriously. Verified corrections are typically applied within one week of receipt.</p>
+  </div>
+
+</div>
+
+<footer>
+  <strong>Japan Knife Makers Database</strong>
+  <p>An independent guide to Japanese knife-making traditions.</p>
+  <p style="margin-top:10px">
+    <a href="index.html">Home</a> &middot;
+    <a href="about.html">About</a> &middot;
+    <a href="contact.html">Contact</a> &middot;
+    <a href="privacy.html">Privacy Policy</a>
+  </p>
+</footer>
+
+<script>
+  const titles = {
+    listing:    'Listing Request',
+    correction: 'Information Correction',
+    other:      'General Inquiry'
+  };
+  const subjects = {
+    listing:    '[Listing Request] Japan Knife Makers Database',
+    correction: '[Correction] Japan Knife Makers Database',
+    other:      '[Inquiry] Japan Knife Makers Database'
+  };
+  const placeholders = {
+    listing:    'Please describe the maker or forge you would like added. Include their region, specialty steels, knife types, and a link to an official website or reliable source if available.',
+    correction: 'Please describe what information is incorrect and provide the correct information with a source if possible.',
+    other:      'Please describe your question or inquiry in as much detail as possible.'
+  };
+  const makerLabels = {
+    listing:    'Maker / Forge Name <span class="required">*</span>',
+    correction: 'Maker Name (if applicable)',
+    other:      'Subject'
+  };
+  const highlights = {
+    listing:    'For listing requests, please include: maker&rsquo;s region, specialty steels, knife types, and a link to an official website or reliable source if available.',
+    correction: 'Please share any source (official website, published book, or reputable retailer) that confirms the correct information.',
+    other:      'We read every message but cannot guarantee a personal reply to all inquiries. For urgent matters, please indicate so in your message.'
+  };
+
+  function selectCategory(el, val) {
+    document.querySelectorAll('.cat-card').forEach(c => c.classList.remove('active'));
+    el.classList.add('active');
+    document.getElementById('formTitle').textContent = titles[val];
+    document.getElementById('hiddenSubject').value = subjects[val];
+    document.getElementById('hiddenCategory').value = val;
+    document.getElementById('message').placeholder = placeholders[val];
+    document.getElementById('makerNameLabel').innerHTML = makerLabels[val];
+    document.querySelector('.highlight').innerHTML = highlights[val];
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    const form = document.getElementById('contactForm');
+    const data = new FormData(form);
+
+    fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    }).then(res => {
+      if (res.ok) {
+        document.getElementById('formSection').style.display = 'none';
+        document.getElementById('successMsg').style.display = 'block';
+        document.getElementById('successMsg').scrollIntoView({behavior:'smooth',block:'center'});
+      } else {
+        fallbackMailto();
+      }
+    }).catch(() => fallbackMailto());
+  }
+
+  function fallbackMailto() {
+    const cat  = document.getElementById('hiddenCategory').value;
+    const name = document.getElementById('name').value;
+    const body = document.getElementById('message').value;
+    const subj = encodeURIComponent(document.getElementById('hiddenSubject').value);
+    const bodyEnc = encodeURIComponent('Name: ' + name + '\n\n' + body);
+    window.location.href = 'mailto:contact@japan-knife-makers.com?subject=' + subj + '&body=' + bodyEnc;
+  }
+</script>
+
+</body>
+</html>
