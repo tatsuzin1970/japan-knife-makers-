@@ -1,200 +1,224 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://japan-knife-makers.com/index.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <loc>https://japan-knife-makers.com/</loc>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://japan-knife-makers.com/blog/yu-kurosaki-vs-takeshi-saji.html</loc>
+    <lastmod>2026-03-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://japan-knife-makers.com/blog/aogami-super-vs-sg2.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://japan-knife-makers.com/blog/best-sakai-knife-makers.html</loc>
+    <lastmod>2026-04-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/about.html</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://japan-knife-makers.com/contact.html</loc>
+    <lastmod>2026-03-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/privacy.html</loc>
-    <lastmod>2026-03-10</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>1.0</priority>
+    <lastmod>2026-03-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/chikamasa.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/harukaze.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/hatsukokoro.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/hideo-kitaoka.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/hokiyama.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/ichimonji-mitsuhide.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/isamu-takamura.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/itsuo-doi.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/jikko.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/kai-group.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/katsushige-anryu.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/konosuke.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/mac-knife.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/makoto-kurosaki.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/misono.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/miyabi.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/nao-yamamoto.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/nigara-hamono.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/ryusen.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/sakai-kikumori.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/sakai-takayuki.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/satoshi-nakagawa.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/shungo-ogata.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/takeshi-saji.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/tamahagane.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/tojiro.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/tsunehisa.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/yasuhiro-hirakawa.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/yoshimi-kato.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://japan-knife-makers.com/items/yu-kurosaki.html</loc>
-    <lastmod>2026-03-10</lastmod>
+    <lastmod>2026-03-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
