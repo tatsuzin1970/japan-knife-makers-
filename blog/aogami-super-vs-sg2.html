@@ -38,18 +38,11 @@
       line-height: 1.8;
       font-size: 17px;
     }
-    .site-header {
-      text-align: center;
-      padding: 2rem 1rem 1rem;
-      border-bottom: 1px solid var(--color-border);
-    }
-    .site-header a {
-      text-decoration: none;
-      color: var(--color-text);
-      font-size: 1.1rem;
-      letter-spacing: 0.05em;
-    }
-    .site-header .logo { font-size: 1.5rem; margin-right: 0.3rem; }
+    .site-header { display:none; }
+    nav.breadcrumb{background:#1C2340;padding:14px 24px;display:flex;align-items:center;gap:8px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:.82rem}
+    nav.breadcrumb a{color:#8A90A8;text-decoration:none}
+    nav.breadcrumb a:hover{color:#fff}
+    nav.breadcrumb .sep{color:#3A4060}
     article {
       max-width: var(--max-width);
       margin: 0 auto;
@@ -260,6 +253,14 @@
 <header class="site-header">
   <a href="/"><span class="logo">&#9876;</span> Japan Knife Makers Database</a>
 </header>
+
+<nav class="breadcrumb">
+  <a href="../index.html">Japan Knife Makers</a>
+  <span class="sep">&#8250;</span>
+  <a href="index.html">Blog</a>
+  <span class="sep">&#8250;</span>
+  <span style="color:#fff">Aogami Super vs R2/SG2</span>
+</nav>
 
 <article>
   <h1>Aogami Super vs R2/SG2: Which Japanese Knife Steel Is Right for You?</h1>
